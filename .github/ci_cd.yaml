@@ -1,0 +1,21 @@
+name: Deploy Stack on aws
+on: 
+  push:
+    branches:
+      - main  # when ever any code to be pushed to main branch, it will trigger
+
+jobs:   # we are creating jobs to perform steps
+  deploy:
+    runs-on: ubuntu-latest # from azure pool
+
+    steps:   # steps to setup CDK and run code
+    - name: setup node.js 20 version   # this is just a message
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: checkout git repo code to vm
+      uses: actions/checkout@v2
+
+    - name: verify code in vm
+      run: ls

@@ -1,0 +1,20 @@
+{
+  "version": "36.0.0",
+  "files": {
+    "a3d7dfe6322e79b8f70e67eac165cd533ddc036177e2dc9f93585b338fe80ebf": {
+      "source": {
+        "path": "VarshabmoEc2VpcDay3Stack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "992382386705-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-992382386705-us-east-1",
+          "objectKey": "a3d7dfe6322e79b8f70e67eac165cd533ddc036177e2dc9f93585b338fe80ebf.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::992382386705:role/cdk-hnb659fds-file-publishing-role-992382386705-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

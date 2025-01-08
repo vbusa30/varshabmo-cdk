@@ -1,0 +1,107 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "VarshabmoEc2VpcDay3Stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "VarshabmoEc2VpcDay3Stack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "VarshabmoEc2VpcDay3Stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://992382386705/us-east-1",
+      "properties": {
+        "templateFile": "VarshabmoEc2VpcDay3Stack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::992382386705:role/cdk-hnb659fds-deploy-role-992382386705-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::992382386705:role/cdk-hnb659fds-cfn-exec-role-992382386705-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-992382386705-us-east-1/a3d7dfe6322e79b8f70e67eac165cd533ddc036177e2dc9f93585b338fe80ebf.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "VarshabmoEc2VpcDay3Stack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::992382386705:role/cdk-hnb659fds-lookup-role-992382386705-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "VarshabmoEc2VpcDay3Stack.assets"
+      ],
+      "metadata": {
+        "/VarshabmoEc2VpcDay3Stack/varshavm1/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshavm1InstanceSecurityGroup75228912"
+          }
+        ],
+        "/VarshabmoEc2VpcDay3Stack/varshavm1/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshavm1InstanceRole27ECE311"
+          }
+        ],
+        "/VarshabmoEc2VpcDay3Stack/varshavm1/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshavm1InstanceProfile45A0E1BF"
+          }
+        ],
+        "/VarshabmoEc2VpcDay3Stack/varshavm1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshavm1E87EB489"
+          }
+        ],
+        "/VarshabmoEc2VpcDay3Stack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/VarshabmoEc2VpcDay3Stack/InstanceID": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceID"
+          }
+        ],
+        "/VarshabmoEc2VpcDay3Stack/InstancePublicIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstancePublicIP"
+          }
+        ],
+        "/VarshabmoEc2VpcDay3Stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/VarshabmoEc2VpcDay3Stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/VarshabmoEc2VpcDay3Stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "VarshabmoEc2VpcDay3Stack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

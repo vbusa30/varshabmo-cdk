@@ -1,0 +1,20 @@
+{
+  "version": "36.0.0",
+  "files": {
+    "48457593602c599cab0455678adeb69987b39fc2370b25eafc274ade55bb282d": {
+      "source": {
+        "path": "VarshaDay4Ec2all.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "992382386705-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-992382386705-us-east-1",
+          "objectKey": "48457593602c599cab0455678adeb69987b39fc2370b25eafc274ade55bb282d.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::992382386705:role/cdk-hnb659fds-file-publishing-role-992382386705-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

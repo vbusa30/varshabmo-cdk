@@ -1,0 +1,197 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "VarshaDay4Stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "VarshaDay4Stack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "VarshaDay4Stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://992382386705/us-east-1",
+      "properties": {
+        "templateFile": "VarshaDay4Stack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::992382386705:role/cdk-hnb659fds-deploy-role-992382386705-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::992382386705:role/cdk-hnb659fds-cfn-exec-role-992382386705-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-992382386705-us-east-1/a828f30450ce0a0988bd4b5933c7b2176a19b5dfcab824ede5f597c5cf73df5a.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "VarshaDay4Stack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::992382386705:role/cdk-hnb659fds-lookup-role-992382386705-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "VarshaDay4Stack.assets"
+      ],
+      "metadata": {
+        "/VarshaDay4Stack/varsha-d4-bucket1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshad4bucket107C43CA7"
+          }
+        ],
+        "/VarshaDay4Stack/varsha-d4-bucket1/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshad4bucket1Policy0187481B"
+          }
+        ],
+        "/VarshaDay4Stack/varsha-d4-bucket1/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshad4bucket1AutoDeleteObjectsCustomResource18D2A96E"
+          }
+        ],
+        "/VarshaDay4Stack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/VarshaDay4Stack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/VarshaDay4Stack/varsha-d4-bucket2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshad4bucket292D1A2A0"
+          }
+        ],
+        "/VarshaDay4Stack/varsha-d4-bucket2/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshad4bucket2PolicyEAA8BA99"
+          }
+        ],
+        "/VarshaDay4Stack/varsha-d4-bucket2/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshad4bucket2AutoDeleteObjectsCustomResource3F708070"
+          }
+        ],
+        "/VarshaDay4Stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/VarshaDay4Stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/VarshaDay4Stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "VarshaDay4Stack"
+    },
+    "VarshaDay4Ec2all.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "VarshaDay4Ec2all.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "VarshaDay4Ec2all": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://992382386705/us-east-1",
+      "properties": {
+        "templateFile": "VarshaDay4Ec2all.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::992382386705:role/cdk-hnb659fds-deploy-role-992382386705-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::992382386705:role/cdk-hnb659fds-cfn-exec-role-992382386705-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-992382386705-us-east-1/48457593602c599cab0455678adeb69987b39fc2370b25eafc274ade55bb282d.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "VarshaDay4Ec2all.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::992382386705:role/cdk-hnb659fds-lookup-role-992382386705-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "VarshaDay4Ec2all.assets"
+      ],
+      "metadata": {
+        "/VarshaDay4Ec2all/varshad4SG/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshad4SG29EE545B"
+          }
+        ],
+        "/VarshaDay4Ec2all/varshad4vm1/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshad4vm1InstanceRoleA2CBFA21"
+          }
+        ],
+        "/VarshaDay4Ec2all/varshad4vm1/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshad4vm1InstanceProfileD7F02FF9"
+          }
+        ],
+        "/VarshaDay4Ec2all/varshad4vm1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "varshad4vm114669A11"
+          }
+        ],
+        "/VarshaDay4Ec2all/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/VarshaDay4Ec2all/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/VarshaDay4Ec2all/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/VarshaDay4Ec2all/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "VarshaDay4Ec2all"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

@@ -4,8 +4,42 @@ on:
     branches:
       - main  # when ever any code to be pushed to main branch, it will trigger
 
-jobs:   # we are creating jobs to perform steps
-  deploy:
+jobs:  
+  ec2-deploy: #job name
+    runs-on: ubuntu-latest # from azure pool
+    needs: s3-deploy # it will run after s3-deploy job
+    
+    steps:   # steps to setup CDK and run code
+    - name: setup node.js 20 version   # this is just a message
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: checkout git repo code to vm
+      uses: actions/checkout@v2
+
+    - name: verify code in vm
+      run: ls
+
+    - name: install dependencies
+      run: |
+        cd  varsha-day4/
+        npm install
+        npm install -g aws-cdk
+    
+    - name: complie code 
+      run: |
+        cd varsha-day4/
+        cdk synth 
+    - name: deploy cdk in aws account 
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+      run: |
+        cd varsha-day4/
+        cdk deploy VarshaDay4Ec2all --require-approval never
+  s3-deploy: #job name
     runs-on: ubuntu-latest # from azure pool
 
     steps:   # steps to setup CDK and run code
@@ -22,13 +56,13 @@ jobs:   # we are creating jobs to perform steps
 
     - name: install dependencies
       run: |
-        cd  varsha-ec2vpc-day3
+        cd  varsha-day4
         npm install
         npm install -g aws-cdk
     
     - name: complie code 
       run: |
-        cd varsha-ec2vpc-day3
+        cd varsha-day4
         cdk synth 
     - name: deploy cdk in aws account 
       env:
@@ -36,5 +70,5 @@ jobs:   # we are creating jobs to perform steps
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: ${{ secrets.AWS_REGION }}
       run: |
-        cd varsha-ec2vpc-day3
-        cdk deploy --require-approval never
+        cd varsha-day4
+        cdk deploy VarshaDay4Stack --require-approval never
